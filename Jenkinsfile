@@ -12,18 +12,14 @@ pipeline {
         }
         }
 
-        stage ('Testing Stage') {
+        stage ('Build Stage') {
 
            steps {
-                bat "mvn test"
+                bat "mvn install"
         }
         }
 
 
-        stage ('Deployment Stage') {
-             steps {
-                bat "mvn deploy"
-        }
-        }
+      
     }
 }
